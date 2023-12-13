@@ -19,7 +19,7 @@
     "serve": "^13.0.4"
   },
   "scripts": {
-    "build": "react-scripts build",
+    "build": "npm install && react-scripts build",
     "start": "serve -s build"
   },
   "eslintConfig": {
