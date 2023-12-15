@@ -1,0 +1,14 @@
+// custom.scss
+
+// Sobrescrevendo variáveis do Bootstrap
+$theme-colors: (
+  "primary": #007bff,   // Exemplo de cor primária
+  "secondary": #6c757d, // Exemplo de cor secundária
+  // Adicione outras cores conforme necessário
+);
+
+$body-bg: #f8f8f8; // Fundo cinza claro
+$body-color: #333; // Cor do texto
+
+// Importando Bootstrap
+@import '~bootstrap/scss/bootstrap';
