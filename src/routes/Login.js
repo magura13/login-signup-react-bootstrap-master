@@ -13,7 +13,6 @@ function Login() {
       const data = { email, password };     
       try {
         const  response = await LoginService(data);
-        console.log(response)
         if (response.accessToken) {
           setEmail("");
           setPassword("");
