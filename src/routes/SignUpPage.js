@@ -21,10 +21,12 @@ function SignUpPage() {
     try {
       const response = await SignUp(data);
   
-      if (response && response.status === 200) {
+      if (response.response.default === 'User added successfully') {
         alert('Registered Successfully!');
         navigate("/login");
       } else {
+        console.log(response.response.default)
+        console.log("entrou no if bosta")
         alert('Registration failed. Please try again.');
       }
     } catch (error) {
@@ -35,6 +37,7 @@ function SignUpPage() {
           const validationErrors = error.response.data.ValidationErrors.map(err => err.msg).join('\n');
           alert(validationErrors);
         } else {
+          console.log("entrou aqui nessa merda")
           alert('An error occurred. Please try again.');
         }
       } else {
